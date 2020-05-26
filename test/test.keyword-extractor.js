@@ -277,4 +277,23 @@ describe("extractor", function(){
         extractor.getStopwords().should.not.be.empty;
         extractor.getStopwords({language:"english"}).should.not.be.empty;
     });
+
+    it("should return an object with words occurrences", function(){
+        var extraction_result = extractor.extract("The Black Sox scandal of 1920 saw the lifetime ban of 8 members of the Chicago White Sox, a lifetime ban.",{
+            language: "english",
+            return_occurrences: true
+        });
+        extraction_result.should.eql({
+             "8": 1,
+             "1920": 1,
+             "Black": 1,
+             "Chicago": 1,
+             "Sox": 2,
+             "White": 1,
+             "ban": 2,
+             "lifetime": 2,
+             "members": 1,
+             "scandal": 1
+            });
+    });
 });

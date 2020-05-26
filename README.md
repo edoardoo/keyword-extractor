@@ -81,6 +81,7 @@ return_changed_case | The case of the extracted keywords. Setting the value to _
 return_chained_words | Instead of returning each word separately, join the words that were originally together. Setting the value to _true_ will join the words, if _false_ the results will be splitted on each array element. | _true_ or _false_
 remove_duplicates | Removes the duplicate keywords | _true_ , _false_ (defaults to _false_ )
 return_max_ngrams | Returns keywords that are ngrams with size 0-_integer_  | _integer_ , _false_ (defaults to _false_ )
+return_occurrences | Returns an object with the number of occurrences for each word, `remove_duplicates` must be turned off  |  _true_ , _false_ (defaults to _false_ )
 
 
 ## Credits
